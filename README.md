@@ -17,7 +17,7 @@ YOURPASSFORSYS and
 YOURPASSFORORDS_PUBLIC_USER
 to your own settings.
 
-In the tnsnames.ora file , remeber to change the HOSTIP
+In the tnsnames.ora file , remeber to change the YOURHOSTID
 
 once done, 
 To Build
