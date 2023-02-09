@@ -14,10 +14,14 @@ To do:
 - In the tnsnames.ora file , remeber to change the YOURHOSTID
 
 To Build:
-docker build -t my_ords:1.0.0 .
+
+      docker build -t ords_4_ex:1.0.0 .
+
 
 To Run:
-docker run -d -p 8080:8080 my_ords:1.0.0
+
+      docker run -d -p 8080:8080 ords_4_ex:1.0.0
+
 
 For ATP, you need 
 - JDK11
@@ -49,3 +53,18 @@ For ATP, you need
 - Change passwd in Dockerfile for ords password and atp service name( this can be found in OCI )
 
       RUN bash -e config_ords.sh <PWD for Custom_ords_public_user> <atp tns name>
+      
+Once you have wallet zip file, jdk 11 , passwd and tnsname ready, 
+To build 
+
+      docker build -t ords_4_apt:1.0.0 .
+      
+To Run 
+      
+      docker run -d -p 8080:8080 ords_4_apt:1.0.0
+      
+To be able to test ATP APEX builder, you do need a proxy server with ssl enabled, else you will have this error. XE APEX builder does not have this problem.
+
+      This site can’t provide a secure connection192.168.86.21 sent an invalid response.
+      ERR_SSL_PROTOCOL_ERROR
+      
