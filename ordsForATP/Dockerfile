@@ -11,7 +11,7 @@ COPY ./jdk-11.0.17_linux-x64_bin.rpm /tmp
 RUN rpm -ivh /tmp/jdk-11*.rpm
 WORKDIR /root
 COPY ./config_ords.sh .
-RUN bash -e config_ords.sh Apex_12345678 bc060ji33tyo79mv_low
+RUN bash -e config_ords.sh ${custom_ords_public_user_pwd} ${tns_names}
 RUN chown -R oracle:oinstall /opt/oracle
 
 ENTRYPOINT cd /opt/oracle/ords/config/ords && \
