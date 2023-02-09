@@ -42,4 +42,5 @@ For ATP, you need
           commit;
         end;
       /
-- 
+- ATP wallet zip file( which can be downloaded from your OCI console )  
+      RUN bash -e config_ords.sh <PWD for Custom_ords_public_user> <atp service name>
