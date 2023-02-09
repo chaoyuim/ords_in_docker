@@ -23,6 +23,7 @@ For ATP, you need
 - JDK11
 - create CUSTOM_ORDS_PUBLIC_USER, grant connect and provision_runtime_role (read here https://wordpress.chaoyu.nl/?p=810 )
 - set CDN image location  (read here https://wordpress.chaoyu.nl/?p=810 )
+
       -- 1. Create the database user.
       create user custom_ords_public_user identified by YOURPASSWORD;
       -- 2. Allow the user to connect to the database.
@@ -42,5 +43,9 @@ For ATP, you need
           commit;
         end;
       /
+        
+      
 - ATP wallet zip file( which can be downloaded from your OCI console )  
+- Change passwd in Dockerfile for ords password and atp service name( this can be found in OCI )
+
       RUN bash -e config_ords.sh <PWD for Custom_ords_public_user> <atp service name>
