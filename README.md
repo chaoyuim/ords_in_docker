@@ -1,7 +1,7 @@
-# ords_in_docker
+# ORDs server in Docker
 dockerize your ords server For Both XE and ATP in OCI
 
-For XE, you need 
+# For XE, you need 
 - JDK11
 - tnsnames.ora
 - password for sys 
@@ -23,7 +23,7 @@ To Run:
       docker run -d -p 8080:8080 ords_4_ex:1.0.0
 
 
-For ATP, you need 
+# For ATP, you need 
 - JDK11
 - create CUSTOM_ORDS_PUBLIC_USER, grant connect and provision_runtime_role (read here https://wordpress.chaoyu.nl/?p=810 )
 - set CDN image location  (read here https://wordpress.chaoyu.nl/?p=810 )
