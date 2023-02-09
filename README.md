@@ -48,4 +48,4 @@ For ATP, you need
 - ATP wallet zip file( which can be downloaded from your OCI console )  
 - Change passwd in Dockerfile for ords password and atp service name( this can be found in OCI )
 
-      RUN bash -e config_ords.sh <PWD for Custom_ords_public_user> <atp service name>
+      RUN bash -e config_ords.sh <PWD for Custom_ords_public_user> <atp tns name>
