@@ -1,16 +1,14 @@
 # ords_in_docker
-dockerize your ords server
+dockerize your ords server For Both XE and ATP in OCI
 
-Download jdk11 rpm from here
+For XE, you need 
+- JDK11
+- tnsnames.ora
+- password for sys 
+- password for ORDS_PUBLIC_USER
 
-
-https://www.oracle.com/nl/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox
-
-
-Linux x64 RPM Package	145.03 MB	jdk-11.0.17_linux-x64_bin.rpm
-
-
-place jdk-11.0.17_linux-x64_bin.rpm file in the same folder
+Download jdk-11.0.17_linux-x64_bin.rpm from here https://www.oracle.com/nl/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox
+place both tnsnames.ora and jdk*.rpm in the same folder ords4
 
 In the config_ords.sh file remember to change 
 YOURPASSFORSYS and 
