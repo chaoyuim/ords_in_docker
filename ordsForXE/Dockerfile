@@ -15,11 +15,10 @@ COPY ./config_ords.sh /root
 
 RUN chmod +x /root/*.sh
 WORKDIR /root
-RUN echo pwd
+RUN  pwd
 RUN /bin/bash -c './config_ords.sh'
-RUN echo pwd
-RUN mv ./databases/db1 ./databases/default
+RUN  pwd
+#RUN mv ./databases/db1 ./databases/default
 
 
-ENTRYPOINT cd /root && \
-           ords serve
+ENTRYPOINT ords --config /etc/ords/config serve &> /tmp/ords_xe.log
