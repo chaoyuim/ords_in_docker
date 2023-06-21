@@ -1,8 +1,8 @@
 FROM oraclelinux:7-slim
 EXPOSE 8080
 RUN yum-config-manager --add-repo=http://yum.oracle.com/repo/OracleLinux/OL7/oracle/software/x86_64
-RUN yum upgrade && yum update
-RUN yum update && yum upgrade
+RUN yum upgrade -y
+# RUN yum update && yum upgrade
 RUN yum install ords -y
 USER oracle
 RUN cd /opt/oracle && mkdir network/admin -p
